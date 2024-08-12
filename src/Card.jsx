@@ -1,12 +1,10 @@
 import React from 'react'
 
-const Card = ({ course, index }) => {
+const Card = ({ course }) => {
     return (
         <>
-            <div className='d-flex flex-wrap m-3'>
-           
-            
-                <div className="card shadow-lg" key={ course.key} style={{ width: '24rem' }}>
+            <li className='d-flex flex-wrap m-3' key={course.id} >
+                <div className="card shadow-lg" style={{ width: '24rem' }}>
 
                     <img className="card-img-top img-fluid h-100 object-fit-cover" src={course.img} alt="Card image cap" />
                     <div className="card-body">
@@ -14,12 +12,7 @@ const Card = ({ course, index }) => {
                         <a href="#" className="btn btn-success w-100">Know More ⮞⮞ </a>
                     </div>
                 </div>
-
-               
-            </div>
-           
-          
-
+            </li>
         </>
     )
 }

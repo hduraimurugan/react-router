@@ -18,17 +18,17 @@ function App() {
     {
       courseName: 'Java Full Stack Development',
       img: "https://static.guvi.in/blog/zenThumbnail/java-fsd.webp",
-      key:1
+      id:1
     },
     {
       courseName: 'MERN Full Stack Development',
       img: "https://static.guvi.in/blog/zenThumbnail/mern-fsd.webp",
-      key:2
+      id:2
     },
     {
       courseName: 'Python Full Stack Development',
       img: "https://static.guvi.in/course-thumbnail/webps/functional.webp",
-      key:3
+      id:3
     }
   ]
 
@@ -36,41 +36,41 @@ function App() {
     {
       courseName: 'Data Science Course For Beginers to Advanced',
       img: "https://static.guvi.in/blog/zenThumbnail/java-at.webp",
-      key:4
+      id:4
     },
     {
       courseName: 'Data Engineering Course with Bigdata and Hadoop',
       img: "https://static.guvi.in/blog/zenThumbnail/data-engineeringg.webp",
-      key:5
+      id:5
     },
     {
       courseName: 'Data Engineering Course with Bigdata and Hadoop',
       img: "https://static.guvi.in/blog/zenThumbnail/java-at.webp",
-      key:6
+      id:6
     }
   ]
   const cyberSecurity = [
     {
       courseName: 'Cyber Security and Ethical Hacking - Beginner',
       img: "https://static.guvi.in/course-thumbnail/webps/dark-web.webp",
-      key:7
+      id:7
     },
     {
       courseName: 'Cyber Security and Ethical Hacking - Intermediate',
       img: "https://static.guvi.in/course-thumbnail/webps/dark-web.webp",
-      key:8
+      id:8
     },
     {
       courseName: 'Cyber Security and Ethical Hacking - Advanced',
       img: "https://static.guvi.in/course-thumbnail/webps/dark-web.webp",
-      key:9
+      id:9
     }
   ]
   const career = [
     {
       courseName: 'Business Communication',
       img: "https://static.guvi.in/course-thumbnail/webps/businesscommunicationenglish.webp",
-      key:10
+      id:10
     }
   ]
 

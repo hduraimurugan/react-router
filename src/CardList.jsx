@@ -8,23 +8,23 @@ const CardList = ({ fullStacks, dataScience, cyberSecurity, career }) => {
   return (
     <>
       <div className='container d-flex flex-wrap text-center'>
-        {fullStacks.map((course, index) => (
-          <Card course={course} index={index} />
+        {fullStacks.map((course) => (
+          <Card course={course} key={course.id} />
         ))}
 
-        {dataScience.map((course, index) => (
+        {dataScience.map((course) => (
 
-          <Card course={course} index={index} />
+          <Card course={course}  key={course.id} />
         ))}
 
-        {cyberSecurity.map((course, index) => (
+        {cyberSecurity.map((course) => (
 
-          <Card course={course} index={index} />
+          <Card course={course}  key={course.id} />
         ))}
 
-        {career.map((course, index) => (
+        {career.map((course) => (
 
-          <Card course={course} index={index} />
+          <Card course={course}  key={course.id} />
         ))}
 
       </div>
