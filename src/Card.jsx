@@ -6,7 +6,7 @@ const Card = ({ course, index }) => {
             <div className='d-flex flex-wrap m-3'>
            
             
-                <div className="card shadow-lg" key={index} style={{ width: '24rem' }}>
+                <div className="card shadow-lg" key={ course.key} style={{ width: '24rem' }}>
 
                     <img className="card-img-top img-fluid h-100 object-fit-cover" src={course.img} alt="Card image cap" />
                     <div className="card-body">
