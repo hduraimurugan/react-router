@@ -5,9 +5,9 @@ const Fullstack = ({ fullStacks }) => {
   return (
     <>
       <div className='container d-flex flex-wrap text-center'>
-        {fullStacks.map((course, index) => (
+        {fullStacks.map((course) => (
 
-          <Card course={course} index={index} />
+          <Card course={course} key={course.id} />
 
         ))}</div>
     </>

@@ -5,9 +5,9 @@ const Datascience = ({dataScience}) => {
     return (
         <>
             <div className='container d-flex flex-wrap text-center'>
-                {dataScience.map((course, index) => (
+                {dataScience.map((course) => (
 
-                    <Card course={course} index={index} />
+                    <Card course={course} key={course.id} />
                 ))}
             </div>
         </>
