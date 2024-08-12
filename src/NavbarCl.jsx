@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -9,19 +9,9 @@ import Navbar from 'react-bootstrap/Navbar';
 function NavbarCl() {
 
 const [activeLink, setActiveLink] = useState('/');
-    const [isOpen, setIsOpen] = useState(false);
-
-  const toggleNavbar = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const closeNavbar = () => {
-    setIsOpen(false);
-  };
 
     const toggleClass = (path) => {
         setActiveLink(path);
-        toggleNavbar();
     };
     
   return (
@@ -66,11 +56,6 @@ const [activeLink, setActiveLink] = useState('/');
 }
 
 export default NavbarCl;
-
-
-
-
-
 
 
 // import React from 'react'
