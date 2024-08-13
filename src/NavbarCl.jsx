@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -21,32 +21,32 @@ const [activeLink, setActiveLink] = useState('/');
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav ">
           <Nav className="me-auto navbar-nav p-3">
-            <Link className={activeLink === '/' ? 'active nav-link' : 'nav-link'} 
+            <NavLink className={activeLink === '/' ? 'active nav-link' : 'nav-link'} 
                                 onClick={() => toggleClass('/')} 
                                 to="/"
                             >
-                                ALL</Link>
+                                ALL</NavLink>
                                 
-            <Link className={activeLink === '/fullstack' ? 'active nav-link' : 'nav-link'} 
+            <NavLink className={activeLink === '/fullstack' ? 'active nav-link' : 'nav-link'} 
                                 onClick={() => toggleClass('/fullstack')} 
                                 to="/fullstack"
                             >
-                                FULL STACK DEVELOPMENT</Link>
-            <Link className={activeLink === '/datascience' ? 'active nav-link' : 'nav-link'} 
+                                FULL STACK DEVELOPMENT</NavLink>
+            <NavLink className={activeLink === '/datascience' ? 'active nav-link' : 'nav-link'} 
                                 onClick={() => toggleClass('/datascience')} 
                                 to="/datascience"
                             >
-                                DATA SCIENCE</Link>   
-            <Link className={activeLink === '/cybersecurity' ? 'active nav-link' : 'nav-link'} 
+                                DATA SCIENCE</NavLink>   
+            <NavLink className={activeLink === '/cybersecurity' ? 'active nav-link' : 'nav-link'} 
                                 onClick={() => toggleClass('/cybersecurity')} 
                                 to="/cybersecurity"
                             >
-                                CYBER SECURITY</Link>
-            <Link  className={activeLink === '/career' ? 'active nav-link' : 'nav-link'} 
+                                CYBER SECURITY</NavLink>
+            <NavLink  className={activeLink === '/career' ? 'active nav-link' : 'nav-link'} 
                                 onClick={() => toggleClass('/career')} 
                                 to="/career"
                             >
-                                CAREER</Link>                                                       
+                                CAREER</NavLink>                                                       
             
           </Nav>
         </Navbar.Collapse>
