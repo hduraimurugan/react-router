@@ -1,153 +1,93 @@
 import React from 'react'
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.min.js";
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
 
-function NavbarCl() {
-
-const [activeLink, setActiveLink] = useState('/');
+const Navbar = () => {
+    const [activeLink, setActiveLink] = useState('/');
 
     const toggleClass = (path) => {
         setActiveLink(path);
+        closeNavbar();
     };
-    
-  return (
-    <Navbar expand="lg" className="navbar  navbar-fixed-top fixed-top navbar-expand-lg navbar-light bg-light shadow-lg">
-      <Container>
-       
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav ">
-          <Nav className="me-auto navbar-nav p-3">
-            <NavLink className={activeLink === '/' ? 'active nav-link' : 'nav-link'} 
-                                onClick={() => toggleClass('/')} 
-                                to="/"
-                            >
-                                ALL</NavLink>
-                                
-            <NavLink className={activeLink === '/fullstack' ? 'active nav-link' : 'nav-link'} 
-                                onClick={() => toggleClass('/fullstack')} 
-                                to="/fullstack"
-                            >
-                                FULL STACK DEVELOPMENT</NavLink>
-            <NavLink className={activeLink === '/datascience' ? 'active nav-link' : 'nav-link'} 
-                                onClick={() => toggleClass('/datascience')} 
-                                to="/datascience"
-                            >
-                                DATA SCIENCE</NavLink>   
-            <NavLink className={activeLink === '/cybersecurity' ? 'active nav-link' : 'nav-link'} 
-                                onClick={() => toggleClass('/cybersecurity')} 
-                                to="/cybersecurity"
-                            >
-                                CYBER SECURITY</NavLink>
-            <NavLink  className={activeLink === '/career' ? 'active nav-link' : 'nav-link'} 
-                                onClick={() => toggleClass('/career')} 
-                                to="/career"
-                            >
-                                CAREER</NavLink>                                                       
-            
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
-  );
-}
 
-export default NavbarCl;
+    return (
+
+        <div>
+            <nav className="navbar navbar-fixed-top fixed-top navbar-expand-lg navbar-light bg-light shadow-lg">
+
+                <div className="container">
+                    <button className="navbar-toggler" type="button" data-toggle="collapse"
+                        aria-controls="collapsibleNavbar" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
 
 
-// import React from 'react'
-// import { useState } from 'react';
-// import { Link, Outlet } from 'react-router-dom';
-// import "bootstrap/dist/css/bootstrap.min.css";
-// import "bootstrap/dist/js/bootstrap.min.js";
-// import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+                    <div className="collapse navbar-collapse justify-content-center" id="collapsibleNavbar" >
+                        <ul className="navbar-nav p-3" >
 
+                            <li className="nav-item px-2">
+                                <Link
+                                    className={activeLink === '/' ? 'active activee nav-link' : 'nav-link'}
+                                    onClick={() => toggleClass('/')}
+                                    to="/"
+                                >
+                                    ALL
+                                </Link>
+                            </li>
 
-// const Navbar = () => {
-//     const [activeLink, setActiveLink] = useState('/');
+                            <li className="nav-item px-2">
+                                <Link
+                                    className={activeLink === '/fullstack' ? 'active activee nav-link' : 'nav-link'}
+                                    onClick={() => toggleClass('/fullstack')}
+                                    to="/fullstack"
+                                >
+                                    FULL STACK DEVELOPMENT
+                                </Link>
+                            </li>
 
-//     const toggleClass = (path) => {
-//         setActiveLink(path);
-//         closeNavbar();
-//     };
+                            <li className="nav-item px-2">
+                                <Link
+                                    className={activeLink === '/datascience' ? 'active activee nav-link' : 'nav-link'}
+                                    onClick={() => toggleClass('/datascience')}
+                                    to="/datascience"
+                                >
+                                    DATA SCIENCE
+                                </Link>
+                            </li>
 
-//     return (
+                            <li className="nav-item px-2">
+                                <Link
+                                    className={activeLink === '/cybersecurity' ? 'active activee nav-link' : 'nav-link'}
+                                    onClick={() => toggleClass('/cybersecurity')}
+                                    to="/cybersecurity"
+                                >
+                                    CYBER SECURITY
+                                </Link>
+                            </li>
 
-//         <div>
-//             <nav className="navbar navbar-fixed-top fixed-top navbar-expand-lg navbar-light bg-light shadow-lg">
+                            <li className="nav-item px-2">
+                                <Link
+                                    className={activeLink === '/career' ? 'active activee nav-link' : 'nav-link'}
+                                    onClick={() => toggleClass('/career')}
+                                    to="/career"
+                                >
+                                    CAREER
+                                </Link>
+                            </li>
 
-//                 <div className="container">
-//                     <button className="navbar-toggler" type="button" data-toggle="collapse"
-//                         aria-controls="collapsibleNavbar" aria-label="Toggle navigation">
-//                         <span className="navbar-toggler-icon"></span>
-//                     </button>
+                        </ul>
 
+                    </div>
+                </div>
+            </nav>
+            <Outlet />
+        </div>
+    );
+};
 
-//                     <div className="collapse navbar-collapse justify-content-center" id="collapsibleNavbar" >
-//                         <ul className="navbar-nav p-3" >
-
-//                             <li className="nav-item px-2">
-//                                 <Link
-//                                     className={activeLink === '/' ? 'active activee nav-link' : 'nav-link'}
-//                                     onClick={() => toggleClass('/')}
-//                                     to="/"
-//                                 >
-//                                     ALL
-//                                 </Link>
-//                             </li>
-
-//                             <li className="nav-item px-2">
-//                                 <Link
-//                                     className={activeLink === '/fullstack' ? 'active activee nav-link' : 'nav-link'}
-//                                     onClick={() => toggleClass('/fullstack')}
-//                                     to="/fullstack"
-//                                 >
-//                                     FULL STACK DEVELOPMENT
-//                                 </Link>
-//                             </li>
-
-//                             <li className="nav-item px-2">
-//                                 <Link
-//                                     className={activeLink === '/datascience' ? 'active activee nav-link' : 'nav-link'}
-//                                     onClick={() => toggleClass('/datascience')}
-//                                     to="/datascience"
-//                                 >
-//                                     DATA SCIENCE
-//                                 </Link>
-//                             </li>
-
-//                             <li className="nav-item px-2">
-//                                 <Link
-//                                     className={activeLink === '/cybersecurity' ? 'active activee nav-link' : 'nav-link'}
-//                                     onClick={() => toggleClass('/cybersecurity')}
-//                                     to="/cybersecurity"
-//                                 >
-//                                     CYBER SECURITY
-//                                 </Link>
-//                             </li>
-
-//                             <li className="nav-item px-2">
-//                                 <Link
-//                                     className={activeLink === '/career' ? 'active activee nav-link' : 'nav-link'}
-//                                     onClick={() => toggleClass('/career')}
-//                                     to="/career"
-//                                 >
-//                                     CAREER
-//                                 </Link>
-//                             </li>
-
-//                         </ul>
-
-//                     </div>
-//                 </div>
-//             </nav>
-//             <Outlet />
-//         </div>
-//     );
-// };
-
-// export default Navbar;
+export default Navbar;
 

@@ -7,11 +7,6 @@ import Cybersecurity from './Cybersecurity'
 import Career from './Career'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.css';
-import "bootstrap/dist/js/bootstrap.min.js";
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-
-
-
 
 function App() {
   const fullStacks = [
