@@ -2,8 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.min.js";
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+
 
 
 const Navbar = () => {
@@ -11,7 +10,6 @@ const Navbar = () => {
 
     const toggleClass = (path) => {
         setActiveLink(path);
-        closeNavbar();
     };
 
     return (

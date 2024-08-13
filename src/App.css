@@ -1,18 +1,7 @@
 body{
     padding-top: 7rem;
 }
-/* 
-.links :hover{
-    cursor: pointer;
-    color: black;
-    transform: scale(1.02);
-    border-bottom-style: solid;
-    border-bottom-color: rgb(0, 124, 37);
-}  */
 
-
-body div nav div div div a:hover{
+.activee{
     transform: scale(1.02);
-    border-bottom-style: solid;
-    border-bottom-color: rgb(0, 124, 37);
 }
