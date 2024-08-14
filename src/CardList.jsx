@@ -7,7 +7,7 @@ const CardList = ({ fullStacks, dataScience, cyberSecurity, career }) => {
 
   return (
     <>
-      <div className='container d-flex flex-wrap text-center'>
+      <div className='container d-flex flex-wrap justify-content-center text-center'>
         {fullStacks.map((course) => (
           <Card course={course} key={course.id} />
         ))}
