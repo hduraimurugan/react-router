@@ -3,8 +3,8 @@ import React from 'react'
 const Card = ({ course }) => {
     return (
         <>
-            <li className='d-flex flex-wrap m-3' key={course.id} >
-                <div className="card shadow-lg" style={{ width: '24rem' }}>
+            <li className='d-flex flex-wrap p-3 ' key={course.id} >
+                <div className="card shadow-lg" style={{ width: '20rem' , height: '16rem'}}>
 
                     <img className="card-img-top img-fluid h-100 object-fit-cover" src={course.img} alt="Card image cap" />
                     <div className="card-body">
