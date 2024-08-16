@@ -76,7 +76,7 @@ function App() {
 
         <Routes>
 
-          <Route index path="/" element={<CardList
+          <Route path="/" element={<CardList
             fullStacks={fullStacks}
             dataScience={dataScience}
             cyberSecurity={cyberSecurity}
