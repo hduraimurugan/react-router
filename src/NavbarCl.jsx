@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 
 
-const Navbar = () => {
+const NavbarCl = () => {
     const [activeLink, setActiveLink] = useState('/');
 
     const toggleClass = (path) => {
@@ -87,5 +87,5 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;
+export default NavbarCl;
 
