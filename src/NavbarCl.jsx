@@ -1,32 +1,38 @@
-import React from 'react'
+import React from 'react';
 import { useState } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.min.css";
 
-
-
 const NavbarCl = () => {
     const [activeLink, setActiveLink] = useState('/');
+    const [navbarCollapsed, setNavbarCollapsed] = useState(true);
 
     const toggleClass = (path) => {
         setActiveLink(path);
+        setNavbarCollapsed(true); // Close the navbar on click
+    };
+
+    const handleToggle = () => {
+        setNavbarCollapsed(!navbarCollapsed);
     };
 
     return (
-
         <div>
             <nav className="navbar navbar-fixed-top fixed-top navbar-expand-lg navbar-light bg-light shadow-lg">
-
                 <div className="container">
-                    <button className="navbar-toggler" type="button" data-toggle="collapse"
-                        aria-controls="collapsibleNavbar" aria-label="Toggle navigation">
+                    <button
+                        className="navbar-toggler"
+                        type="button"
+                        data-toggle="collapse"
+                        aria-controls="collapsibleNavbar"
+                        aria-label="Toggle navigation"
+                        onClick={handleToggle}
+                    >
                         <span className="navbar-toggler-icon"></span>
                     </button>
 
-
-                    <div className="collapse navbar-collapse justify-content-center" id="collapsibleNavbar" >
-                        <ul className="navbar-nav p-3" >
-
+                    <div className={`${navbarCollapsed ? 'collapse' : ''} navbar-collapse justify-content-center`} id="collapsibleNavbar">
+                        <ul className="navbar-nav p-3">
                             <li className="nav-item px-2">
                                 <Link
                                     className={activeLink === '/' ? 'active activee nav-link' : 'nav-link'}
@@ -76,9 +82,7 @@ const NavbarCl = () => {
                                     CAREER
                                 </Link>
                             </li>
-
                         </ul>
-
                     </div>
                 </div>
             </nav>
@@ -88,4 +92,3 @@ const NavbarCl = () => {
 };
 
 export default NavbarCl;
-
